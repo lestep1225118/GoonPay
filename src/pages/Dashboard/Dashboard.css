@@ -1,0 +1,183 @@
+.dashboard-page {
+  min-height: 100vh;
+  background: #f9fafb; 
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+.balance-card {
+  background: linear-gradient(to right, #4f46e5, #7c3aed); 
+  color: white;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.balance-card-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.balance-label {
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.balance-amount {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.balance-welcome {
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+.balance-icon {
+  width: 4rem;
+  height: 4rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.quick-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .quick-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.quick-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.quick-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.quick-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.15s ease;
+}
+
+.quick-button.primary {
+  background: #4f46e5;
+  color: white;
+}
+
+.quick-button.primary:hover {
+  background: #4338ca;
+}
+
+.quick-button.secondary {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.quick-button.secondary:hover {
+  background: #e5e7eb;
+}
+
+.recent-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.recent-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.no-transactions {
+  text-align: center;
+  padding: 2rem 0;
+  color: #6b7280;
+}
+
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.transaction-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.transaction-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle.red {
+  background: #fee2e2;
+}
+
+.circle.green {
+  background: #dcfce7;
+}
+
+.red-text {
+  color: #dc2626;
+}
+
+.green-text {
+  color: #16a34a;
+}
+
+.transaction-name {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.transaction-date {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.transaction-amount {
+  font-weight: bold;
+  font-size: 1rem;
+}

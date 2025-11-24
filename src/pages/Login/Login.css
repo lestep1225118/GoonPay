@@ -1,0 +1,150 @@
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.login-card {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  background: #4f46e5;
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-icon {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.login-subtitle {
+  margin-top: 0.5rem;
+  color: #6b7280;
+}
+
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.alert-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.alert-success {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  width: 100%;
+  background: #4f46e5;
+  color: white;
+  padding: 0.85rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #4338ca;
+}
+
+.icon-sm {
+  width: 20px;
+  height: 20px;
+}
+
+.switch-section {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #6b7280;
+}
+
+.switch-link {
+  color: #4f46e5;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  display: inline-block;
+}
+
+.switch-link:hover {
+  color: #4338ca;
+}
+
+.demo-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.75rem;
+}
+
+.demo-title {
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 0.3rem;
+}
+
+.demo-line {
+  font-size: 0.9rem;
+  color: #1e3a8a;
+}
