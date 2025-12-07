@@ -133,7 +133,7 @@ export default function Signup() {
         </div>
 
         <div className="info-box">
-          <strong>Note:</strong> New accounts start with $1,000.00 virtual balance
+          <strong>Note:</strong> New accounts start with 1,000.00 goonbucks reward balance
         </div>
 
       </div>

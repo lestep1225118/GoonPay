@@ -23,7 +23,7 @@ export default function HistoryPage({
               <HistoryIcon className="history-empty-icon" />
               <p className="history-empty-text">No transactions yet</p>
               <p className="history-empty-sub">
-                Start sending money to see your transaction history.
+                Start sending rewards to see your transaction history.
               </p>
             </div>
           ) : (
@@ -62,7 +62,7 @@ export default function HistoryPage({
                         t.from === currentUser.id ? "amount-red" : "amount-green"
                       }`}
                     >
-                      {t.from === currentUser.id ? "-" : "+"}${t.amount.toFixed(2)}
+                      {t.from === currentUser.id ? "-" : "+"}{t.amount.toFixed(2)} goonbucks
                     </p>
                   </div>
 

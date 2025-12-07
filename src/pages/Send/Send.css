@@ -58,7 +58,7 @@ textarea {
 
 .btn-primary {
   width: 100%;
-  background: #4f46e5;
+  background: #2563eb;
   color: white;
   padding: 1rem;
   border-radius: 0.75rem;
@@ -73,7 +73,7 @@ textarea {
 }
 
 .btn-primary:hover {
-  background: #4338ca;
+  background: #1d4ed8;
 }
 
 .icon-lg {

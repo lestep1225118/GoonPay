@@ -18,7 +18,7 @@ export default function Send({
       <div className="send-container">
         <div className="send-card">
 
-          <h2 className="send-title">Send Money</h2>
+          <h2 className="send-title">Send Rewards</h2>
 
           {error && <div className="alert alert-error">{error}</div>}
           {success && <div className="alert alert-success">{success}</div>}
@@ -38,7 +38,7 @@ export default function Send({
             </div>
 
             <div className="form-group">
-              <label>Amount ($)</label>
+              <label>Amount (goonbucks)</label>
               <input
                 type="number"
                 step="0.01"
@@ -49,7 +49,7 @@ export default function Send({
                 placeholder="0.00"
               />
               <p className="balance-text">
-                Available balance: ${currentUser.balance.toFixed(2)}
+                Available rewards: {currentUser.balance.toFixed(2)} goonbucks
               </p>
             </div>
 
@@ -67,7 +67,7 @@ export default function Send({
 
             <button className="btn-primary" onClick={handleSendMoney}>
               <SendIcon className="icon-lg" />
-              Send Money
+              Send Rewards
             </button>
 
           </div>

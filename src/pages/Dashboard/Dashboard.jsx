@@ -16,8 +16,8 @@ export default function Dashboard({ currentUser, getUserTransactions, handleLogo
         <div className="balance-card">
           <div className="balance-card-inner">
             <div>
-              <p className="balance-label">Available Balance</p>
-              <h2 className="balance-amount">${currentUser.balance.toFixed(2)}</h2>
+              <p className="balance-label">Available Rewards</p>
+              <h2 className="balance-amount">{currentUser.balance.toFixed(2)} goonbucks</h2>
               <p className="balance-welcome">
                 Welcome back, {currentUser.username}!
               </p>
@@ -29,10 +29,10 @@ export default function Dashboard({ currentUser, getUserTransactions, handleLogo
         {/* Quick Action Cards */}
         <div className="quick-grid">
           <div className="quick-card">
-            <h3 className="quick-title">Quick Send</h3>
+            <h3 className="quick-title">Quick Transfer</h3>
             <Link to="/send" className="quick-button primary">
               <Send className="icon-sm" />
-              Send Money
+              Send Rewards
             </Link>
           </div>
 
@@ -86,7 +86,7 @@ export default function Dashboard({ currentUser, getUserTransactions, handleLogo
                         : "transaction-amount green-text"
                     }
                   >
-                    {t.from === currentUser.id ? "-" : "+"}${t.amount.toFixed(2)}
+                    {t.from === currentUser.id ? "-" : "+"}{t.amount.toFixed(2)} goonbucks
                   </p>
                 </div>
               ))}

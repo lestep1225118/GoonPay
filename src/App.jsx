@@ -89,11 +89,11 @@ export default function App() {
       const data = await res.json();
 
       if (!res.ok) {
-        setSendError(data.error || "Failed to send money");
+        setSendError(data.error || "Failed to send rewards");
         return;
       }
 
-      setSendSuccess(data.message || "Transfer complete");
+      setSendSuccess(data.message || "Reward transfer complete");
       setSendForm({ recipient: "", amount: "", note: "" });
       
       // Play sound effect
@@ -128,7 +128,7 @@ export default function App() {
       }
     } catch (err) {
       console.error("Send error:", err);
-      setSendError("Something went wrong while sending");
+      setSendError("Something went wrong while sending rewards");
     }
   };
 

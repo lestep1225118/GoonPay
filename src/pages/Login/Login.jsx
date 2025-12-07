@@ -34,7 +34,13 @@ export default function Login() {
             <img src="/unnamed-removebg-preview.png" alt="GoonPay Logo" className="login-icon" style={{ width: '192px', height: '192px', objectFit: 'contain' }} />
           </div>
           <h1 className="login-title">GoonPay</h1>
-          <p className="login-subtitle">Virtual Payment Simulator</p>
+          <p className="login-subtitle">Reward Transfer System</p>
+        </div>
+
+        <div className="login-description">
+          <p className="description-text">
+            This is a reward system where students can receive goonbucks from professors for rewards and transfer them to professors for rewards.
+          </p>
         </div>
 
         {localError && <div className="alert alert-error">{localError}</div>}

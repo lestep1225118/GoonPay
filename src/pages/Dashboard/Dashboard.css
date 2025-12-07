@@ -5,7 +5,7 @@
 
 .dashboard-container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 2rem 1rem;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .balance-card {
-  background: linear-gradient(to right, #4f46e5, #7c3aed); 
+  background: linear-gradient(to right, #2563eb, #3b82f6); 
   color: white;
   padding: 2rem;
   border-radius: 1.25rem;
@@ -85,12 +85,12 @@
 }
 
 .quick-button.primary {
-  background: #4f46e5;
+  background: #2563eb;
   color: white;
 }
 
 .quick-button.primary:hover {
-  background: #4338ca;
+  background: #1d4ed8;
 }
 
 .quick-button.secondary {

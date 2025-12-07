@@ -24,7 +24,7 @@
 .profile-avatar {
   width: 95px;
   height: 95px;
-  background: #e0e7ff;
+  background: #dbeafe;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -35,7 +35,7 @@
 .profile-avatar-icon {
   width: 55px;
   height: 55px;
-  color: #4f46e5;
+  color: #2563eb;
 }
 
 .profile-username {
@@ -72,8 +72,8 @@
   font-weight: 600;
 }
 
-.indigo {
-  color: #4f46e5;
+.blue {
+  color: #2563eb;
 }
 
 .mono {

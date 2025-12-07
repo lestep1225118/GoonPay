@@ -1,6 +1,6 @@
 .login-page {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+  background: linear-gradient(to bottom right, #eff6ff, #dbeafe);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,10 +22,10 @@
 }
 
 .login-icon-wrapper {
-  width: 4rem;
-  height: 4rem;
-  background: #4f46e5;
-  border-radius: 50%;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border-radius: 0;
   margin: 0 auto 1rem auto;
   display: flex;
   justify-content: center;
@@ -33,8 +33,8 @@
 }
 
 .login-icon {
-  width: 32px;
-  height: 32px;
+  width: 192px;
+  height: 192px;
   color: white;
 }
 
@@ -47,6 +47,22 @@
 .login-subtitle {
   margin-top: 0.5rem;
   color: #6b7280;
+}
+
+.login-description {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.description-text {
+  font-size: 0.9rem;
+  color: #1e40af;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .alert {
@@ -74,11 +90,16 @@
   gap: 1.2rem;
 }
 
+.form-group {
+  width: 100%;
+}
+
 .form-group label {
   font-size: 0.9rem;
   color: #374151;
   margin-bottom: 0.25rem;
   display: block;
+  text-align: left;
 }
 
 .form-group input {
@@ -87,11 +108,13 @@
   border: 1px solid #d1d5db;
   border-radius: 0.75rem;
   font-size: 1rem;
+  box-sizing: border-box;
+  display: block;
 }
 
 .btn-primary {
   width: 100%;
-  background: #4f46e5;
+  background: #2563eb;
   color: white;
   padding: 0.85rem;
   border-radius: 0.75rem;
@@ -105,7 +128,7 @@
 }
 
 .btn-primary:hover {
-  background: #4338ca;
+  background: #1d4ed8;
 }
 
 .icon-sm {
@@ -120,14 +143,14 @@
 }
 
 .switch-link {
-  color: #4f46e5;
+  color: #2563eb;
   font-weight: 600;
   margin-top: 0.25rem;
   display: inline-block;
 }
 
 .switch-link:hover {
-  color: #4338ca;
+  color: #1d4ed8;
 }
 
 .demo-box {
@@ -136,6 +159,7 @@
   background: #eff6ff;
   border: 1px solid #bfdbfe;
   border-radius: 0.75rem;
+  text-align: center;
 }
 
 .demo-title {
