@@ -1,0 +1,224 @@
+.classes-page {
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+.classes-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .classes-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.classes-main {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.classes-title {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.classes-subtitle {
+  margin: 0.35rem 0 1.25rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.classes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.classes-item {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s, transform 0.05s,
+    border-color 0.15s;
+}
+
+.classes-item:hover {
+  background: #f9fafb;
+  border-color: #c7d2fe;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.classes-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.classes-item-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.classes-role-badge {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.55rem;
+  border-radius: 999px;
+  text-transform: capitalize;
+}
+
+.role-professor {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.role-ta {
+  background: #ecfdf3;
+  color: #166534;
+}
+
+.role-student {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.classes-item-desc {
+  margin: 0.1rem 0 0.6rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.classes-item-footer {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.classes-item-balance strong {
+  color: #111827;
+}
+
+.classes-empty {
+  padding: 1.5rem 1rem;
+  border-radius: 0.75rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.95rem;
+}
+
+.classes-empty-sub {
+  margin-top: 0.15rem;
+  color: #6b7280;
+}
+
+.classes-error {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 0.9rem;
+}
+
+.classes-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.classes-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.classes-card h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.2rem;
+}
+
+.classes-card-sub {
+  margin: 0 0 1.2rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.classes-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.classes-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.classes-optional {
+  font-weight: 400;
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+.classes-input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.6rem;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.classes-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.2);
+}
+
+.classes-input::placeholder {
+  color: #9ca3af;
+}
+
+.classes-btn {
+  margin-top: 0.4rem;
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.15s, transform 0.05s, box-shadow 0.1s;
+}
+
+.classes-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.classes-btn:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.classes-btn:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
