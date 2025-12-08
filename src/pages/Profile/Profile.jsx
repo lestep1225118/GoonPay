@@ -24,14 +24,6 @@ export default function Profile({
           </div>
 
           <div className="profile-grid">
-
-            <div className="profile-item">
-              <p className="item-label">Reward Balance</p>
-              <p className="item-value blue">
-                {currentUser.balance.toFixed(2)} goonbucks
-              </p>
-            </div>
-
             <div className="profile-item">
               <p className="item-label">User ID</p>
               <p className="item-value mono">{currentUser.id}</p>
