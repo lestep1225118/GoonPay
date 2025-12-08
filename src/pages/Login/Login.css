@@ -10,8 +10,8 @@
 .login-card {
   background: white;
   width: 100%;
-  max-width: 420px;
-  padding: 2rem;
+  max-width: 600px;
+  padding: 3rem;
   border-radius: 1.25rem;
   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
