@@ -9,41 +9,35 @@ export default function HistoryPage({
 }) {
   const txs = getUserTransactions() || [];
 
-  // All outgoing payments: purchases, rewards you sent, manual transfers
-  const outgoing = txs.filter((t) => t.from === currentUser.id);
-
-  // All incoming GoonBucks: rewards received, sales, transfers to you
-  const received = txs.filter((t) => t.to === currentUser.id);
-
   const formatDate = (iso) => {
     if (!iso) return "";
     const d = new Date(iso);
-    return d.toLocaleString();
+    return d.toLocaleDateString();
   };
 
-  const labelForOutgoing = (t) => {
-    switch (t.type) {
-      case "purchase":
-        return "Purchase";
-      case "reward":
-        return "Reward sent";
-      case "transfer":
-      default:
-        return "GoonBucks sent";
-    }
+  const formatTime = (iso) => {
+    if (!iso) return "";
+    const d = new Date(iso);
+    return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   };
 
-  const labelForIncoming = (t) => {
-    switch (t.type) {
-      case "purchase":
-        return "Sale";
-      case "reward":
-        return "Class reward";
-      case "transfer":
-      default:
-        return "GoonBucks received";
-    }
+  const getDescription = (t) => {
+    return t.note || "No note provided";
   };
+
+  // Combine all transactions and sort by date (most recent first)
+  const allTransactions = txs
+    .map((t) => ({
+      ...t,
+      isIncoming: t.to === currentUser.id,
+      amount: t.amount,
+      timestamp: t.timestamp,
+    }))
+    .sort((a, b) => {
+      const dateA = new Date(a.timestamp || 0);
+      const dateB = new Date(b.timestamp || 0);
+      return dateB - dateA; // Most recent first
+    });
 
   return (
     <div className="history-page">
@@ -58,102 +52,42 @@ export default function HistoryPage({
           </p>
         </header>
 
-        <div className="history-grid">
-          <section className="history-card">
-            <h3>GoonBucks Spent (All Outgoing)</h3>
-            {outgoing.length === 0 ? (
-              <p className="history-empty">
-                You haven&apos;t sent any GoonBucks yet.
-              </p>
-            ) : (
-              <ul className="history-list">
-                {outgoing.map((t) => (
-                  <li key={t.id} className="history-item">
-                    <div className="history-item-main">
-                      <span className="history-amount negative">
-                        -{t.amount} GB
-                      </span>
-                      <div className="history-text">
-                        <p className="history-line-primary">
-                          {labelForOutgoing(t)}{" "}
-                          {t.listingTitle && t.type === "purchase"
-                            ? `- ${t.listingTitle}`
-                            : ""}
-                          {t.className && (
-                            <span className="history-class-tag">
-                              {t.className}
-                              {t.classCode ? ` (${t.classCode})` : ""}
-                            </span>
-                          )}
-                        </p>
-                        <p className="history-line-secondary">
-                          {t.note || "No note provided"}
-                        </p>
+        <div className="history-card">
+          {allTransactions.length === 0 ? (
+            <p className="history-empty">
+              No transaction history yet.
+            </p>
+          ) : (
+            <table className="history-table">
+              <thead>
+                <tr>
+                  <th className="history-th-date">Date</th>
+                  <th className="history-th-description">Description</th>
+                  <th className="history-th-amount">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {allTransactions.map((t) => (
+                  <tr key={t.id} className="history-row">
+                    <td className="history-td-date">
+                      <div className="history-date-cell">
+                        <span className="history-date-main">{formatDate(t.timestamp)}</span>
+                        <span className="history-time">{formatTime(t.timestamp)}</span>
                       </div>
-                    </div>
-                    <div className="history-meta">
-                      <span className="history-date">
-                        {formatDate(t.timestamp)}
+                    </td>
+                    <td className="history-td-description">
+                      {getDescription(t)}
+                    </td>
+                    <td className="history-td-amount">
+                      <span className={`history-amount ${t.isIncoming ? "positive" : "negative"}`}>
+                        {t.isIncoming ? "+" : "-"}{t.amount} goonbucks
                       </span>
-                      {t.toUsername && (
-                        <span className="history-party">
-                          to {t.toUsername}
-                        </span>
-                      )}
-                    </div>
-                  </li>
+                    </td>
+                  </tr>
                 ))}
-              </ul>
-            )}
-          </section>
-
-          <section className="history-card">
-            <h3>GoonBucks Received (All Sources)</h3>
-            {received.length === 0 ? (
-              <p className="history-empty">
-                You haven&apos;t received any GoonBucks yet.
-              </p>
-            ) : (
-              <ul className="history-list">
-                {received.map((t) => (
-                  <li key={t.id} className="history-item">
-                    <div className="history-item-main">
-                      <span className="history-amount positive">
-                        +{t.amount} GB
-                      </span>
-                      <div className="history-text">
-                        <p className="history-line-primary">
-                          {labelForIncoming(t)}{" "}
-                          {t.listingTitle && t.type === "purchase"
-                            ? `- ${t.listingTitle}`
-                            : ""}
-                          {t.className && (
-                            <span className="history-class-tag">
-                              {t.className}
-                              {t.classCode ? ` (${t.classCode})` : ""}
-                            </span>
-                          )}
-                        </p>
-                        <p className="history-line-secondary">
-                          {t.note || "No note provided"}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="history-meta">
-                      <span className="history-date">
-                        {formatDate(t.timestamp)}
-                      </span>
-                      {t.fromUsername && (
-                        <span className="history-party">
-                          from {t.fromUsername}
-                        </span>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </section>
+              </tbody>
+            </table>
+          )}
         </div>
       </div>
     </div>
