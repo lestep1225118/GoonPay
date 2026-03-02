@@ -31,15 +31,15 @@ export default function Login() {
 
         <div className="login-header">
           <div className="login-icon-wrapper">
-            <img src="/unnamed-removebg-preview.png" alt="GoonPay Logo" className="login-icon" style={{ width: '192px', height: '192px', objectFit: 'contain' }} />
+            <img src="/logo.png" alt="MoonPay Logo" className="login-icon" style={{ width: '192px', height: '192px', objectFit: 'contain' }} />
           </div>
-          <h1 className="login-title">GoonPay</h1>
+          <h1 className="login-title">MoonPay</h1>
           <p className="login-subtitle">Reward Transfer System</p>
         </div>
 
         <div className="login-description">
           <p className="description-text">
-            This is a reward system where students can receive goonbucks from professors for rewards and transfer them to professors for rewards.
+            This is a reward system where students can receive moonbucks from professors for rewards and transfer them to professors for rewards.
           </p>
         </div>
 
@@ -78,12 +78,6 @@ export default function Login() {
         <div className="switch-section">
           <p>Don't have an account?</p>
           <Link to="/signup" className="switch-link">Create Account</Link>
-        </div>
-
-        <div className="demo-box">
-          <p className="demo-title">Demo Account:</p>
-          <p className="demo-line">Username: demo</p>
-          <p className="demo-line">Password: demo123</p>
         </div>
 
       </div>

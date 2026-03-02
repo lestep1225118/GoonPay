@@ -8,12 +8,12 @@ export default function Navbar({ handleLogout }) {
       <div className="navbar-inner">
         <div className="navbar-logo">
           <img
-            src="/unnamed-removebg-preview.png"
-            alt="GoonPay Logo"
+            src="/logo.png"
+            alt="MoonPay Logo"
             className="navbar-logo-icon"
             style={{ width: "64px", height: "64px", objectFit: "contain" }}
           />
-          <h1 className="navbar-title">GoonPay</h1>
+          <h1 className="navbar-title">MoonPay</h1>
         </div>
 
         <div className="navbar-links">

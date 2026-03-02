@@ -79,9 +79,9 @@ export default function Dashboard({
       <div className="dashboard-container">
         <header className="dashboard-header">
           <div>
-            <h2>Welcome, {currentUser?.username || "Goon"}</h2>
+            <h2>Welcome, {currentUser?.username || "User"}</h2>
             <p>
-              Track your GoonBucks in each class and jump straight into your
+              Track your MoonBucks in each class and jump straight into your
               class marketplace.
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function Dashboard({
                   <div className="dashboard-balance-card">
                     <div className="dashboard-balance-main">
                       <p className="dashboard-balance-label">
-                        GoonBucks in this class
+                        MoonBucks in this class
                       </p>
                       <p className="dashboard-balance-value">
                         {selectedClass.balance ?? 0}
@@ -151,10 +151,10 @@ export default function Dashboard({
           </section>
 
           <section className="dashboard-card">
-            <h3>Recent GoonBucks Activity</h3>
+            <h3>Recent MoonBucks Activity</h3>
             {recentTxs.length === 0 ? (
               <p className="dashboard-empty">
-                No recent GoonBucks activity yet.
+                No recent MoonBucks activity yet.
               </p>
             ) : (
               <ul className="dashboard-tx-list">
@@ -182,8 +182,8 @@ export default function Dashboard({
                               ? "Class reward received"
                               : "Class reward sent"
                             : incoming
-                            ? "GoonBucks received"
-                            : "GoonBucks sent"}{" "}
+                            ? "MoonBucks received"
+                            : "MoonBucks sent"}{" "}
                           {t.className && (
                             <span className="dashboard-class-tag">
                               {t.className}

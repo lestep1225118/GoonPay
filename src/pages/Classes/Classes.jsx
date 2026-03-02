@@ -167,7 +167,7 @@ export default function ClassesPage({ handleLogout }) {
                   <div className="classes-item-footer">
                     <span className="classes-item-balance">
                       Balance in this class:{" "}
-                      <strong>{c.balance ?? 0} GoonBucks</strong>
+                      <strong>{c.balance ?? 0} MoonBucks</strong>
                     </span>
                   </div>
                 </button>
@@ -211,7 +211,7 @@ export default function ClassesPage({ handleLogout }) {
                 className="classes-input"
                 value={createName}
                 onChange={(e) => setCreateName(e.target.value)}
-                placeholder="Intro to GoonPay"
+                placeholder="Intro to MoonPay"
               />
 
               <label className="classes-label">

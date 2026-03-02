@@ -64,11 +64,11 @@ export default function Signup() {
 
         <div className="signup-header">
           <div className="signup-icon-wrapper">
-            <img src="/unnamed-removebg-preview.png" alt="GoonPay Logo" className="signup-icon" style={{ width: '192px', height: '192px', objectFit: 'contain' }} />
+            <img src="/logo.png" alt="MoonPay Logo" className="signup-icon" style={{ width: '192px', height: '192px', objectFit: 'contain' }} />
           </div>
 
           <h1 className="signup-title">Create Account</h1>
-          <p className="signup-subtitle">Join GoonPay today</p>
+          <p className="signup-subtitle">Join MoonPay today</p>
         </div>
 
         {localError && <div className="alert alert-error">{localError}</div>}
@@ -133,7 +133,7 @@ export default function Signup() {
         </div>
 
         <div className="info-box">
-          <strong>Note:</strong> New accounts start with 1,000.00 goonbucks reward balance
+          <strong>Note:</strong> New accounts start with 1,000.00 moonbucks reward balance
         </div>
 
       </div>

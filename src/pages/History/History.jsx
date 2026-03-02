@@ -45,9 +45,9 @@ export default function HistoryPage({
 
       <div className="history-container">
         <header className="history-header">
-          <h2>GoonBucks History</h2>
+          <h2>MoonBucks History</h2>
           <p>
-            See every GoonBucks payment you&apos;ve made or received across all
+            See every MoonBucks payment you&apos;ve made or received across all
             classes.
           </p>
         </header>
@@ -80,7 +80,7 @@ export default function HistoryPage({
                     </td>
                     <td className="history-td-amount">
                       <span className={`history-amount ${t.isIncoming ? "positive" : "negative"}`}>
-                        {t.isIncoming ? "+" : "-"}{t.amount} goonbucks
+                        {t.isIncoming ? "+" : "-"}{t.amount} moonbucks
                       </span>
                     </td>
                   </tr>

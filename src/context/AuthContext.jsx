@@ -49,7 +49,12 @@ export function AuthProvider({ children }) {
         body: JSON.stringify({ username, password }),
       });
 
-      const data = await res.json();
+      let data;
+      try {
+        data = await res.json();
+      } catch {
+        data = {};
+      }
 
       if (!res.ok) {
         return { ok: false, error: data.error || "Login failed" };
@@ -63,7 +68,13 @@ export function AuthProvider({ children }) {
       return { ok: true };
     } catch (err) {
       console.error("Login error:", err);
-      return { ok: false, error: "Network error during login" };
+      return {
+        ok: false,
+        error:
+          err.message?.includes("fetch") || err.name === "TypeError"
+            ? "Cannot reach the server. Make sure the backend is running (see README)."
+            : "Network error during login",
+      };
     }
   };
   const signup = async ({ username, email, password }) => {
@@ -74,7 +85,12 @@ export function AuthProvider({ children }) {
         body: JSON.stringify({ username, email, password }),
       });
 
-      const data = await res.json();
+      let data;
+      try {
+        data = await res.json();
+      } catch {
+        data = {};
+      }
 
       if (!res.ok) {
         return { ok: false, error: data.error || "Signup failed" };
@@ -86,7 +102,13 @@ export function AuthProvider({ children }) {
       };
     } catch (err) {
       console.error("Signup error:", err);
-      return { ok: false, error: "Network error during signup" };
+      return {
+        ok: false,
+        error:
+          err.message?.includes("fetch") || err.name === "TypeError"
+            ? "Cannot reach the server. Make sure the backend is running (see README)."
+            : "Network error during signup",
+      };
     }
   };
 

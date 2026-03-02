@@ -307,7 +307,7 @@ export default function ClassDetailPage({ handleLogout }) {
   };
 
   const handlePurchase = async (listingId) => {
-    if (!window.confirm("Spend your GoonBucks on this item?")) return;
+    if (!window.confirm("Spend your MoonBucks on this item?")) return;
 
     setActionLoading(true);
     setError("");
@@ -435,7 +435,7 @@ export default function ClassDetailPage({ handleLogout }) {
             {isStudent && (
               <div className="class-balance">
                 <Coins className="class-balance-icon" />
-                <span>{classInfo.balance} GoonBucks in this class</span>
+                <span>{classInfo.balance} MoonBucks in this class</span>
               </div>
             )}
           </div>
@@ -541,8 +541,8 @@ export default function ClassDetailPage({ handleLogout }) {
                 <h3>Class Marketplace</h3>
                 <p>
                   {isStudent
-                    ? "Spend your GoonBucks on rewards."
-                    : "Create items students can buy with GoonBucks."}
+                    ? "Spend your MoonBucks on rewards."
+                    : "Create items students can buy with MoonBucks."}
                 </p>
               </div>
             </div>
@@ -631,7 +631,7 @@ export default function ClassDetailPage({ handleLogout }) {
                       </p>
                       <div className="class-listing-meta">
                         <span className="class-listing-price">
-                          {item.price} GoonBucks
+                          {item.price} MoonBucks
                         </span>
                         {item.createdBy && (
                           <span className="class-listing-seller">
